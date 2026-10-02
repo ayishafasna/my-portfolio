@@ -41,11 +41,7 @@ h1{font-size:clamp(1.9rem,5.5vw,3.6rem);line-height:1.1;font-weight:800;letter-s
 .card.m .body{padding:16px 20px 20px}
 .card.m p{color:var(--muted);font-size:.95rem;margin:6px 0 12px}
 .card.m .tags li{font-size:.8rem;padding:3px 10px}
-.seg{display:flex;gap:6px;margin-bottom:12px}
-.seg button{font:inherit;font-size:.8rem;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
-.seg button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .card.m.g img{aspect-ratio:1.5/1}
-.card.m img.is-model{object-fit:contain;background:#d4d4d0}
 @keyframes spin{to{transform:rotateX(360deg) rotateY(360deg)}}
 @media(prefers-reduced-motion:reduce){.cube{animation:none;transform:rotateX(-25deg) rotateY(35deg)}html{scroll-behavior:auto}}
 section{padding:44px 0;border-top:1px solid var(--line)}
@@ -120,16 +116,16 @@ footer p{margin-bottom:6px}
 <h2>3D models</h2>
 <p class="sum" style="margin-bottom:20px">Internship project at Pencil Interiors: I made 5 detailed 3D models in SketchUp, including furniture pieces and a full house layout, using texture mapping, component management and scene creation, and prepared presentation-ready outputs for client review.</p>
 <div class="grid gal">
-<article class="card m"><a href="render-house.jpg" target="_blank" rel="noopener" aria-label="Open Stone house exterior full size"><img src="render-house.jpg" data-render="render-house.jpg" data-model="model-house.jpg" alt="SketchUp model of a small stone house with a tiled roof, wooden door, window, plants and a bench from two angles" data-alt="SketchUp model of a small stone house with a tiled roof, wooden door, window, plants and a bench from two angles" loading="lazy"></a>
-<div class="body"><div class="seg" role="group" aria-label="Choose view"><button type="button" class="on" data-v="render" aria-pressed="true">Realistic view</button><button type="button" data-v="model" aria-pressed="false">SketchUp view</button></div><h3>Stone house exterior</h3><p>Small house with textured stone walls, a tiled roof, a wooden door, a window, plants and a bench at the entrance.</p><ul class="tags"><li>SketchUp</li><li>3D modelling</li><li>Exterior</li></ul></div></article>
-<article class="card m"><a href="render-tv-unit.jpg" target="_blank" rel="noopener" aria-label="Open TV wall unit full size"><img src="render-tv-unit.jpg" data-render="render-tv-unit.jpg" data-model="model-tv-unit.jpg" alt="SketchUp model of a wooden TV wall unit with open shelves and a checkerboard floor from two angles" data-alt="SketchUp model of a wooden TV wall unit with open shelves and a checkerboard floor from two angles" loading="lazy"></a>
-<div class="body"><div class="seg" role="group" aria-label="Choose view"><button type="button" class="on" data-v="render" aria-pressed="true">Realistic view</button><button type="button" data-v="model" aria-pressed="false">SketchUp view</button></div><h3>TV wall unit</h3><p>Wooden wall unit with a mounted TV, open shelves and storage, set on a checkerboard tile floor.</p><ul class="tags"><li>SketchUp</li><li>Interior design</li><li>Textures</li></ul></div></article>
-<article class="card m"><a href="render-desk.jpg" target="_blank" rel="noopener" aria-label="Open Study desk and chair full size"><img src="render-desk.jpg" data-render="render-desk.jpg" data-model="model-desk.jpg" alt="SketchUp model of a wooden desk with a chair, laptop, books and pen holder from two angles" data-alt="SketchUp model of a wooden desk with a chair, laptop, books and pen holder from two angles" loading="lazy"></a>
-<div class="body"><div class="seg" role="group" aria-label="Choose view"><button type="button" class="on" data-v="render" aria-pressed="true">Realistic view</button><button type="button" data-v="model" aria-pressed="false">SketchUp view</button></div><h3>Study desk and chair</h3><p>Desk and chair with a laptop, stacked books and a pen holder, with wood and metal textures applied.</p><ul class="tags"><li>SketchUp</li><li>Furniture</li><li>Components</li></ul></div></article>
-<article class="card m"><a href="render-console.jpg" target="_blank" rel="noopener" aria-label="Open Console table and bench full size"><img src="render-console.jpg" data-render="render-console.jpg" data-model="model-console.jpg" alt="SketchUp model of a wooden console table with a shelf, books and a patterned bench from two angles" data-alt="SketchUp model of a wooden console table with a shelf, books and a patterned bench from two angles" loading="lazy"></a>
-<div class="body"><div class="seg" role="group" aria-label="Choose view"><button type="button" class="on" data-v="render" aria-pressed="true">Realistic view</button><button type="button" data-v="model" aria-pressed="false">SketchUp view</button></div><h3>Console table and bench</h3><p>Wooden console table with a shelf and books, paired with a bench in a herringbone wood pattern.</p><ul class="tags"><li>SketchUp</li><li>Furniture</li><li>Texture mapping</li></ul></div></article>
+<article class="card m"><a href="render-house.jpg" target="_blank" rel="noopener" aria-label="Open Stone house exterior full size"><img src="render-house.jpg" alt="Realistic view of a small stone house with a tiled roof, wooden door, window, plants and a shoe bench at dusk" loading="lazy"></a>
+<div class="body"><h3>Stone house exterior</h3><p>Small house with textured stone walls, a tiled roof, a wooden door, a window, plants and a bench at the entrance.</p><ul class="tags"><li>SketchUp</li><li>3D modelling</li><li>Exterior</li></ul></div></article>
+<article class="card m"><a href="render-tv-unit.jpg" target="_blank" rel="noopener" aria-label="Open TV wall unit full size"><img src="render-tv-unit.jpg" alt="Realistic view of a wooden TV wall unit with warm lighting, open shelves and a plant" loading="lazy"></a>
+<div class="body"><h3>TV wall unit</h3><p>Wooden wall unit with a mounted TV, open shelves and storage, with warm lighting and a checkerboard rug.</p><ul class="tags"><li>SketchUp</li><li>Interior design</li><li>Textures</li></ul></div></article>
+<article class="card m"><a href="render-desk.jpg" target="_blank" rel="noopener" aria-label="Open Study desk and chair full size"><img src="render-desk.jpg" alt="Realistic view of a wooden desk with a chair, laptop, books and a pen holder by a window" loading="lazy"></a>
+<div class="body"><h3>Study desk and chair</h3><p>Desk and chair with a laptop, stacked books and a pen holder, with wood textures applied.</p><ul class="tags"><li>SketchUp</li><li>Furniture</li><li>Components</li></ul></div></article>
+<article class="card m"><a href="render-console.jpg" target="_blank" rel="noopener" aria-label="Open Console table and bench full size"><img src="render-console.jpg" alt="Realistic view of a wooden console table with books and a patterned side bench" loading="lazy"></a>
+<div class="body"><h3>Console table and bench</h3><p>Wooden console table with a shelf and books, paired with a bench in a herringbone wood pattern.</p><ul class="tags"><li>SketchUp</li><li>Furniture</li><li>Texture mapping</li></ul></div></article>
 </div>
-<p class="meta" style="margin-top:14px">Realistic views are visualisations made from my SketchUp models. Use the buttons on each card to see the original SketchUp views. Select a picture to open it full size.</p>
+<p class="meta" style="margin-top:14px">Realistic views are visualisations made from my SketchUp models. Select a picture to open it full size.</p>
 </section>
 
 <section id="skills">
@@ -180,11 +176,5 @@ footer p{margin-bottom:6px}
 <p>LinkedIn: <a href="https://www.linkedin.com/in/ayisha-fasna-m-331b21317" target="_blank" rel="noopener">Ayisha Fasna M</a></p>
 <p>Based in Ottapalam, Kerala, India. Languages: English, Malayalam, Hindi, Tamil (spoken).</p>
 </div></footer>
-<script>
-document.addEventListener('click',function(e){var b=e.target.closest('.seg button');if(!b)return;
-var card=b.closest('.card'),img=card.querySelector('img'),a=card.querySelector('a'),m=b.dataset.v==='model';
-var src=m?img.dataset.model:img.dataset.render;img.src=src;a.href=src;img.classList.toggle('is-model',m);
-card.querySelectorAll('.seg button').forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)});});
-</script>
 </body>
 </html>
