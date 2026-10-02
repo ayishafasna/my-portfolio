@@ -34,6 +34,18 @@ h1{font-size:clamp(1.9rem,5.5vw,3.6rem);line-height:1.1;font-weight:800;letter-s
 .cube i:nth-child(5){transform:rotateX(90deg) translateZ(60px);border-color:var(--y)}.cube i:nth-child(6){transform:rotateX(-90deg) translateZ(60px);border-color:var(--y)}
 .photo{width:220px;max-width:100%;aspect-ratio:4/5;object-fit:cover;border:3px solid var(--ink);border-radius:8px;box-shadow:10px 10px 0 var(--z)}
 .scene{position:relative}.cubewrap{position:absolute;top:8px;right:8px;width:120px;height:120px;transform:scale(.45);transform-origin:top right;perspective:500px;pointer-events:none}.scene.nophoto .cubewrap{position:static;transform:none}
+.gal{grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:20px}
+.card.m{padding:0;overflow:hidden}
+.card.m a{display:block}
+.card.m img{display:block;width:100%;aspect-ratio:1.65/1;object-fit:cover;border-bottom:1px solid var(--line)}
+.card.m .body{padding:16px 20px 20px}
+.card.m p{color:var(--muted);font-size:.95rem;margin:6px 0 12px}
+.card.m .tags li{font-size:.8rem;padding:3px 10px}
+.seg{display:flex;gap:6px;margin-bottom:12px}
+.seg button{font:inherit;font-size:.8rem;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.seg button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.card.m.g img{aspect-ratio:1.5/1}
+.card.m img.is-model{object-fit:contain;background:#d4d4d0}
 @keyframes spin{to{transform:rotateX(360deg) rotateY(360deg)}}
 @media(prefers-reduced-motion:reduce){.cube{animation:none;transform:rotateX(-25deg) rotateY(35deg)}html{scroll-behavior:auto}}
 section{padding:44px 0;border-top:1px solid var(--line)}
@@ -55,7 +67,7 @@ footer p{margin-bottom:6px}
 </head>
 <body>
 <nav><div class="wrap">
-<a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#achievements">Achievements</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
+<a href="#experience">Experience</a><a href="#games">Games</a><a href="#models">3D models</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#achievements">Achievements</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
 </div></nav>
 
 <main class="wrap">
@@ -88,18 +100,36 @@ footer p{margin-bottom:6px}
 </div>
 </section>
 
-<section id="projects">
-<h2>Projects</h2>
-<div class="grid">
-<article class="card p1"><h3>Unity Robot Navigation</h3><p class="meta">3D, Unity, C#</p>
-<ul><li>Interactive environment where a robot walks, runs and jumps.</li><li>C# movement logic with physics-based interactions.</li></ul></article>
-<article class="card p2"><h3>Coin Collector 2D</h3><p class="meta">2D game, Unity, C#</p>
-<ul><li>Character movement, collectible coins and a dynamic scoring system.</li></ul></article>
-<article class="card p3"><h3>Flappy Bird 2D</h3><p class="meta">2D game, Unity, C#</p>
-<ul><li>Customized version with a new character, obstacles, collision detection and scoring.</li></ul></article>
-<article class="card p1"><h3>Digital Design and Modelling</h3><p class="meta">3D modelling, SketchUp | Internship project, Pencil Interiors</p>
-<ul><li>Made 5 detailed 3D models in SketchUp, including furniture pieces and a full house layout.</li><li>Used texture mapping, component management and scene creation in SketchUp.</li><li>Prepared presentation-ready outputs for client review.</li></ul></article>
+<section id="games">
+<h2>Games</h2>
+<div class="grid gal">
+<article class="card m g"><a href="game-robot.jpg" target="_blank" rel="noopener" aria-label="Open Robot Navigation picture full size"><img src="game-robot.jpg" alt="A 3D robot character standing on a path in a grassy Unity scene with mountains and trees" loading="lazy"></a>
+<div class="body"><h3>Robot Navigation</h3><p>3D robot that walks, runs and jumps through an interactive environment, with C# movement logic and physics-based interactions.</p><ul class="tags"><li>Unity</li><li>C#</li><li>3D</li></ul></div></article>
+<article class="card m g"><a href="game-coin.jpg" target="_blank" rel="noopener" aria-label="Open Coin Collector 2D picture full size"><img src="game-coin.jpg" alt="A 2D platformer with a character, brick platforms, score, lives and a Game Over screen with a Play button" loading="lazy"></a>
+<div class="body"><h3>Coin Collector 2D</h3><p>2D game with character movement, collectible coins, lives and a dynamic scoring system with a high score.</p><ul class="tags"><li>Unity</li><li>C#</li><li>2D</li></ul></div></article>
+<article class="card m g"><a href="game-flappy.jpg" target="_blank" rel="noopener" aria-label="Open Flappy Bird 2D picture full size"><img src="game-flappy.jpg" alt="A Flappy Bird style game with green pipes, a custom bird character and a Game Over screen" loading="lazy"></a>
+<div class="body"><h3>Flappy Bird 2D</h3><p>Customized Flappy Bird-style game with a custom character, movement, obstacles, collision detection and scoring.</p><ul class="tags"><li>Unity</li><li>C#</li><li>2D</li></ul></div></article>
+<article class="card m g"><a href="game-runner.jpg" target="_blank" rel="noopener" aria-label="Open Distance Runner picture full size"><img src="game-runner.jpg" alt="A 3D runner game with a ball in a corridor with red barriers, a distance counter and a Restart button" loading="lazy"></a>
+<div class="body"><h3>Distance Runner</h3><p>3D runner where a ball moves down a corridor past red barriers, with a distance counter and a restart button.</p><ul class="tags"><li>Unity</li><li>3D</li></ul></div></article>
+<article class="card m g"><a href="game-parking.jpg" target="_blank" rel="noopener" aria-label="Open Car Parking picture full size"><img src="game-parking.jpg" alt="A top-down parking game with a yellow car, a target zone, a timer and a parked counter" loading="lazy"></a>
+<div class="body"><h3>Car Parking</h3><p>Top-down game where you drive a car into the marked zone and line up with the arrow, with a timer and a parked counter.</p><ul class="tags"><li>Unity</li><li>Top-down</li></ul></div></article>
 </div>
+</section>
+
+<section id="models">
+<h2>3D models</h2>
+<p class="sum" style="margin-bottom:20px">Internship project at Pencil Interiors: I made 5 detailed 3D models in SketchUp, including furniture pieces and a full house layout, using texture mapping, component management and scene creation, and prepared presentation-ready outputs for client review.</p>
+<div class="grid gal">
+<article class="card m"><a href="render-house.jpg" target="_blank" rel="noopener" aria-label="Open Stone house exterior full size"><img src="render-house.jpg" data-render="render-house.jpg" data-model="model-house.jpg" alt="SketchUp model of a small stone house with a tiled roof, wooden door, window, plants and a bench from two angles" data-alt="SketchUp model of a small stone house with a tiled roof, wooden door, window, plants and a bench from two angles" loading="lazy"></a>
+<div class="body"><div class="seg" role="group" aria-label="Choose view"><button type="button" class="on" data-v="render" aria-pressed="true">Realistic view</button><button type="button" data-v="model" aria-pressed="false">SketchUp view</button></div><h3>Stone house exterior</h3><p>Small house with textured stone walls, a tiled roof, a wooden door, a window, plants and a bench at the entrance.</p><ul class="tags"><li>SketchUp</li><li>3D modelling</li><li>Exterior</li></ul></div></article>
+<article class="card m"><a href="render-tv-unit.jpg" target="_blank" rel="noopener" aria-label="Open TV wall unit full size"><img src="render-tv-unit.jpg" data-render="render-tv-unit.jpg" data-model="model-tv-unit.jpg" alt="SketchUp model of a wooden TV wall unit with open shelves and a checkerboard floor from two angles" data-alt="SketchUp model of a wooden TV wall unit with open shelves and a checkerboard floor from two angles" loading="lazy"></a>
+<div class="body"><div class="seg" role="group" aria-label="Choose view"><button type="button" class="on" data-v="render" aria-pressed="true">Realistic view</button><button type="button" data-v="model" aria-pressed="false">SketchUp view</button></div><h3>TV wall unit</h3><p>Wooden wall unit with a mounted TV, open shelves and storage, set on a checkerboard tile floor.</p><ul class="tags"><li>SketchUp</li><li>Interior design</li><li>Textures</li></ul></div></article>
+<article class="card m"><a href="render-desk.jpg" target="_blank" rel="noopener" aria-label="Open Study desk and chair full size"><img src="render-desk.jpg" data-render="render-desk.jpg" data-model="model-desk.jpg" alt="SketchUp model of a wooden desk with a chair, laptop, books and pen holder from two angles" data-alt="SketchUp model of a wooden desk with a chair, laptop, books and pen holder from two angles" loading="lazy"></a>
+<div class="body"><div class="seg" role="group" aria-label="Choose view"><button type="button" class="on" data-v="render" aria-pressed="true">Realistic view</button><button type="button" data-v="model" aria-pressed="false">SketchUp view</button></div><h3>Study desk and chair</h3><p>Desk and chair with a laptop, stacked books and a pen holder, with wood and metal textures applied.</p><ul class="tags"><li>SketchUp</li><li>Furniture</li><li>Components</li></ul></div></article>
+<article class="card m"><a href="render-console.jpg" target="_blank" rel="noopener" aria-label="Open Console table and bench full size"><img src="render-console.jpg" data-render="render-console.jpg" data-model="model-console.jpg" alt="SketchUp model of a wooden console table with a shelf, books and a patterned bench from two angles" data-alt="SketchUp model of a wooden console table with a shelf, books and a patterned bench from two angles" loading="lazy"></a>
+<div class="body"><div class="seg" role="group" aria-label="Choose view"><button type="button" class="on" data-v="render" aria-pressed="true">Realistic view</button><button type="button" data-v="model" aria-pressed="false">SketchUp view</button></div><h3>Console table and bench</h3><p>Wooden console table with a shelf and books, paired with a bench in a herringbone wood pattern.</p><ul class="tags"><li>SketchUp</li><li>Furniture</li><li>Texture mapping</li></ul></div></article>
+</div>
+<p class="meta" style="margin-top:14px">Realistic views are visualisations made from my SketchUp models. Use the buttons on each card to see the original SketchUp views. Select a picture to open it full size.</p>
 </section>
 
 <section id="skills">
@@ -150,5 +180,11 @@ footer p{margin-bottom:6px}
 <p>LinkedIn: <a href="https://www.linkedin.com/in/ayisha-fasna-m-331b21317" target="_blank" rel="noopener">Ayisha Fasna M</a></p>
 <p>Based in Ottapalam, Kerala, India. Languages: English, Malayalam, Hindi, Tamil (spoken).</p>
 </div></footer>
+<script>
+document.addEventListener('click',function(e){var b=e.target.closest('.seg button');if(!b)return;
+var card=b.closest('.card'),img=card.querySelector('img'),a=card.querySelector('a'),m=b.dataset.v==='model';
+var src=m?img.dataset.model:img.dataset.render;img.src=src;a.href=src;img.classList.toggle('is-model',m);
+card.querySelectorAll('.seg button').forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)});});
+</script>
 </body>
 </html>
